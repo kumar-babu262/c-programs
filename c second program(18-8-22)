@@ -1,7 +1,7 @@
 #include<stdio.h>
 main()
 {
-	int n,i,j,s=0,f;
+	int n,i,j,sum=0,f;
 	printf("enter how many elements=");
 	scanf("%d",&n);
 	int a[n];
@@ -17,7 +17,7 @@ main()
 			f=f*a[i];
 			a[i]--;
 		}
-		s=s+f;
+		sum=s+f;
 	}
-	printf("%d",s);
+	printf("%d",sum);
 }
