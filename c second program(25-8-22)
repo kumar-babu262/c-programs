@@ -1,0 +1,19 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+	char sen[100];
+	int i,c=0;
+	gets(sen);
+	int l=strlen(sen);
+	
+	for(i=0;i<=l;i++)
+	{
+		if(sen[i]==' '||sen[i]=='\0')
+		{
+		c++;
+	    }
+	}
+	printf("%d",c);
+	
+}
