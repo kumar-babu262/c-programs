@@ -1,0 +1,31 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+	char ch[100],ch1[100];
+	int l,i,j,c=0,t;
+	printf("enter two strings:\n");
+	gets(ch);
+	gets(ch1);
+    l=strlen(ch);
+	for(i=0;i<l;i++)
+	{
+		t=c;
+	    for(j=0;j<l;j++)
+	    {
+		if(ch[i]==ch1[j])
+		{
+			c++;
+			ch1[j]=NULL;
+		}
+	    }
+	    if(c==t)
+	    {
+	    	printf("NOT ANAGRAM");
+		}
+	}
+	if(c==l)
+	{
+		printf("ANAGRAM");
+	}
+}
