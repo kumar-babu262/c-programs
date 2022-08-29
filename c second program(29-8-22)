@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+    int i,j,c=0;
+    char ch[1000];
+    char ch1[10]="0123456789";
+    scanf("%s",ch);
+    int l=strlen(ch);
+    for(i=0;i<10;i++)
+    {
+        c=0;
+        for(j=0;j<l;j++)
+        {
+            if(ch1[i]==ch[j])
+            {
+                c++;
+            }
+        }
+        printf("%d ",c);
+    }
+}
