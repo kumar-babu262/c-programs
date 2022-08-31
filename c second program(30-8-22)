@@ -1,1 +1,21 @@
-
+#include<stdio.h>
+#include<string.h>
+main()
+{
+	char ch[100];
+	printf("enter any string:");
+	scanf("%s",ch);
+	int i,l;
+	l=strlen(ch);
+	for(i=0;i<l;i++)
+	{
+		if(ch[i]=='a')
+		{
+			printf("%c",ch[i]-32);
+		}
+		else
+		{
+			printf("%c",ch[i]);
+		}
+	}
+}
