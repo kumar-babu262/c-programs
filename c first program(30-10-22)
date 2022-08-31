@@ -1,0 +1,22 @@
+#include<stdio.h>
+#include<string.h>
+main()
+{
+    char ch[1000];
+    scanf("\n");
+    scanf("%[^\n]%*c", ch);
+    int i,l;
+    l=strlen(ch);
+    for(i=0;i<l;i++)
+    {
+        if(ch[i]==' ')
+        {
+            printf("\n");
+            continue;
+        }
+        else {
+        printf("%c",ch[i]);
+        }
+    }
+    
+}
