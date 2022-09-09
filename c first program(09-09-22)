@@ -1,0 +1,92 @@
+#include<stdio.h>
+#include<stdlib.h>
+void endinsert();
+void search();
+void display();
+int j=0;
+struct node
+{
+	int data;
+	struct node *link;
+}*root=NULL;
+
+main()
+{
+	while(1)
+	{
+	int c;
+	printf("1.insert end\n2.serach\n3.display\n\n");
+	printf("enter your choice-->");
+	scanf("%d",&c);
+	switch(c)
+	{
+		case 1:endinsert();
+		break;
+		case 2:search();
+		break;
+		case 3:display();
+	    break;
+		default:printf("invalid choice\n");
+	}
+}
+}
+
+void endinsert()
+{
+	struct node *temp;
+	temp=(struct node*)malloc(sizeof(struct node));
+	printf("enter value to insert-->");
+	scanf("%d",&
+	
+	temp->data);
+	temp->link=NULL;
+	if(root==NULL)
+	{
+		root=temp;
+		j++;
+	}
+	else
+	{
+		struct node *p=root;
+		while(p->link!=NULL)
+		{
+		  p=p->link;
+		}
+		p->link=temp;
+		j++;
+	}
+}
+void search()
+{
+	struct node *p=root;
+	int n,c=0;
+	printf("enter searching element-->");
+	scanf("%d",&n);
+	while(p!=NULL)
+	{
+		if(n==p->data)
+		{
+			printf("%d found at %d location\n",n,c+1);
+			break;
+		}
+		else
+		{
+			c++;
+			p=p->link;
+		}
+	}
+	if(c==j)
+	{
+		printf("not found\n");
+		}	
+}
+void display()
+{
+	struct node *p=root;
+	while(p!=NULL)
+	{
+		printf("%d-->",p->data);
+		p=p->link;
+	}
+	printf("\n");
+}
